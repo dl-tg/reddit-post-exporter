@@ -136,7 +136,7 @@ func main() {
 		n, err := io.WriteString(file, string(jsonData))
 		checkError(err)
 
-		fmt.Printf("Saved post %d to path %s\nBytes: %d\n", i, path, n)
+		fmt.Printf("Saved post %d to path %s\nBytes: %d\nFull link:\n%s\n", i, path, n, fmt.Sprintf("%s%s", "https://reddit.com", post["permalink"].(string)))
 
 		if post["num_comments"].(float64) != 0 {
 			commentPath := filepath.Join(path, "comments")
@@ -180,7 +180,6 @@ func main() {
 				if ok && data != nil {
 					if children, ok := data["children"].([]interface{}); ok {
 						for j, child := range children {
-							time.Sleep(1 * time.Second)
 							comment := child.(map[string]interface{})
 
 							commentJSONData, err := json.MarshalIndent(comment, "", "  ")
