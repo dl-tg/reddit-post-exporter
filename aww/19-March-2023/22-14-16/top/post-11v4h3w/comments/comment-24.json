@@ -1,0 +1,120 @@
+{
+  "data": {
+    "all_awardings": [],
+    "approved_at_utc": null,
+    "approved_by": null,
+    "archived": false,
+    "associated_award": null,
+    "author": "combatgoat",
+    "author_flair_background_color": null,
+    "author_flair_css_class": null,
+    "author_flair_richtext": [],
+    "author_flair_template_id": null,
+    "author_flair_text": null,
+    "author_flair_text_color": null,
+    "author_flair_type": "text",
+    "author_fullname": "t2_z7kkd",
+    "author_is_blocked": false,
+    "author_patreon_flair": false,
+    "author_premium": false,
+    "awarders": [],
+    "banned_at_utc": null,
+    "banned_by": null,
+    "body": "https://preview.redd.it/tlmr8legjooa1.jpeg?width=1244\u0026amp;format=pjpg\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=7a93477205931a41384e87116d3bec023516cfa7\n\nMy ferrets",
+    "body_html": "\u0026lt;div class=\"md\"\u0026gt;\u0026lt;p\u0026gt;\u0026lt;a href=\"https://preview.redd.it/tlmr8legjooa1.jpeg?width=1244\u0026amp;amp;format=pjpg\u0026amp;amp;auto=webp\u0026amp;amp;v=enabled\u0026amp;amp;s=7a93477205931a41384e87116d3bec023516cfa7\"\u0026gt;https://preview.redd.it/tlmr8legjooa1.jpeg?width=1244\u0026amp;amp;format=pjpg\u0026amp;amp;auto=webp\u0026amp;amp;v=enabled\u0026amp;amp;s=7a93477205931a41384e87116d3bec023516cfa7\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;\n\n\u0026lt;p\u0026gt;My ferrets\u0026lt;/p\u0026gt;\n\u0026lt;/div\u0026gt;",
+    "can_gild": true,
+    "can_mod_post": false,
+    "collapsed": false,
+    "collapsed_because_crowd_control": null,
+    "collapsed_reason": null,
+    "collapsed_reason_code": null,
+    "comment_type": null,
+    "controversiality": 0,
+    "created": 1679206638,
+    "created_utc": 1679206638,
+    "depth": 0,
+    "distinguished": null,
+    "downs": 0,
+    "edited": false,
+    "gilded": 0,
+    "gildings": {},
+    "id": "jcsldsx",
+    "is_submitter": false,
+    "likes": null,
+    "link_id": "t3_11v4h3w",
+    "locked": false,
+    "media_metadata": {
+      "tlmr8legjooa1": {
+        "e": "Image",
+        "id": "tlmr8legjooa1",
+        "m": "image/jpeg",
+        "p": [
+          {
+            "u": "https://preview.redd.it/tlmr8legjooa1.jpeg?width=108\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=10bde3893079508f01bd1c796a8132c14d1882e9",
+            "x": 108,
+            "y": 191
+          },
+          {
+            "u": "https://preview.redd.it/tlmr8legjooa1.jpeg?width=216\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=d3f758ed7b9796678b792e51889861912eb557e4",
+            "x": 216,
+            "y": 383
+          },
+          {
+            "u": "https://preview.redd.it/tlmr8legjooa1.jpeg?width=320\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=203cdec0a6df2d651f2faa03f28ca4425c2546d4",
+            "x": 320,
+            "y": 567
+          },
+          {
+            "u": "https://preview.redd.it/tlmr8legjooa1.jpeg?width=640\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=4a4e75a6945b6256f3cb9640a81097e5174759ca",
+            "x": 640,
+            "y": 1135
+          },
+          {
+            "u": "https://preview.redd.it/tlmr8legjooa1.jpeg?width=960\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=711701063ba82fb6a95c2658e1ce746326ecf905",
+            "x": 960,
+            "y": 1703
+          },
+          {
+            "u": "https://preview.redd.it/tlmr8legjooa1.jpeg?width=1080\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=5bbf92b8b5e7fd3a4c2bad60d6c2685505d446c5",
+            "x": 1080,
+            "y": 1916
+          }
+        ],
+        "s": {
+          "u": "https://preview.redd.it/tlmr8legjooa1.jpeg?width=1244\u0026amp;format=pjpg\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=7a93477205931a41384e87116d3bec023516cfa7",
+          "x": 1244,
+          "y": 2208
+        },
+        "status": "valid"
+      }
+    },
+    "mod_note": null,
+    "mod_reason_by": null,
+    "mod_reason_title": null,
+    "mod_reports": [],
+    "name": "t1_jcsldsx",
+    "no_follow": true,
+    "num_reports": null,
+    "parent_id": "t3_11v4h3w",
+    "permalink": "/r/aww/comments/11v4h3w/oc_my_pitbullrottweilercane_corso_mix/jcsldsx/",
+    "removal_reason": null,
+    "replies": "",
+    "report_reasons": null,
+    "saved": false,
+    "score": 1,
+    "score_hidden": true,
+    "send_replies": true,
+    "stickied": false,
+    "subreddit": "aww",
+    "subreddit_id": "t5_2qh1o",
+    "subreddit_name_prefixed": "r/aww",
+    "subreddit_type": "public",
+    "top_awarded_type": null,
+    "total_awards_received": 0,
+    "treatment_tags": [],
+    "unrepliable_reason": null,
+    "ups": 1,
+    "user_reports": []
+  },
+  "kind": "t1"
+}

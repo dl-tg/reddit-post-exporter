@@ -1,0 +1,242 @@
+{
+  "all_awardings": [
+    {
+      "award_sub_type": "GLOBAL",
+      "award_type": "global",
+      "awardings_required_to_grant_benefits": null,
+      "coin_price": 100,
+      "coin_reward": 0,
+      "count": 1,
+      "days_of_drip_extension": null,
+      "days_of_premium": null,
+      "description": "C'est magnifique",
+      "end_date": null,
+      "giver_coin_reward": null,
+      "icon_format": "PNG",
+      "icon_height": 2048,
+      "icon_url": "https://i.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png",
+      "icon_width": 2048,
+      "id": "award_b4072731-c0fb-4440-adc7-1063d6a5e6a0",
+      "is_enabled": true,
+      "is_new": false,
+      "name": "Masterpiece",
+      "penny_donate": null,
+      "penny_price": 0,
+      "resized_icons": [
+        {
+          "height": 16,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=16\u0026amp;height=16\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=f162f61ae363f12c02888e737f2cb16c1ef1ec76",
+          "width": 16
+        },
+        {
+          "height": 32,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=32\u0026amp;height=32\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=302682d840033201255a2fe2a105ec45cf67a693",
+          "width": 32
+        },
+        {
+          "height": 48,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=48\u0026amp;height=48\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=f3f42da8b2928719f6af5f911ee64bff5e974e99",
+          "width": 48
+        },
+        {
+          "height": 64,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=64\u0026amp;height=64\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=c7cd07a1e46f052689ccab7ad98a6ae6c817d3fa",
+          "width": 64
+        },
+        {
+          "height": 128,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=128\u0026amp;height=128\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=293a8a8f684b86bd4ecf9c5a02d4fb00fc37a105",
+          "width": 128
+        }
+      ],
+      "resized_static_icons": [
+        {
+          "height": 16,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=16\u0026amp;height=16\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=f162f61ae363f12c02888e737f2cb16c1ef1ec76",
+          "width": 16
+        },
+        {
+          "height": 32,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=32\u0026amp;height=32\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=302682d840033201255a2fe2a105ec45cf67a693",
+          "width": 32
+        },
+        {
+          "height": 48,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=48\u0026amp;height=48\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=f3f42da8b2928719f6af5f911ee64bff5e974e99",
+          "width": 48
+        },
+        {
+          "height": 64,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=64\u0026amp;height=64\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=c7cd07a1e46f052689ccab7ad98a6ae6c817d3fa",
+          "width": 64
+        },
+        {
+          "height": 128,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png?width=128\u0026amp;height=128\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=293a8a8f684b86bd4ecf9c5a02d4fb00fc37a105",
+          "width": 128
+        }
+      ],
+      "start_date": null,
+      "static_icon_height": 2048,
+      "static_icon_url": "https://i.redd.it/award_images/t5_22cerq/2juh333m40n51_Masterpiece.png",
+      "static_icon_width": 2048,
+      "sticky_duration_seconds": null,
+      "subreddit_coin_reward": 0,
+      "subreddit_id": null,
+      "tiers_by_required_awardings": null
+    }
+  ],
+  "allow_live_comments": true,
+  "approved_at_utc": null,
+  "approved_by": null,
+  "archived": false,
+  "author": "fat_old_boy",
+  "author_flair_background_color": null,
+  "author_flair_css_class": null,
+  "author_flair_richtext": [],
+  "author_flair_template_id": null,
+  "author_flair_text": null,
+  "author_flair_text_color": null,
+  "author_flair_type": "text",
+  "author_fullname": "t2_utn6npa9",
+  "author_is_blocked": false,
+  "author_patreon_flair": false,
+  "author_premium": false,
+  "awarders": [],
+  "banned_at_utc": null,
+  "banned_by": null,
+  "can_gild": false,
+  "can_mod_post": false,
+  "category": null,
+  "clicked": false,
+  "content_categories": null,
+  "contest_mode": false,
+  "created": 1679218660,
+  "created_utc": 1679218660,
+  "discussion_type": null,
+  "distinguished": null,
+  "domain": "i.redd.it",
+  "downs": 0,
+  "edited": false,
+  "gilded": 0,
+  "gildings": {},
+  "hidden": false,
+  "hide_score": false,
+  "id": "11vgu0h",
+  "is_created_from_ads_ui": false,
+  "is_crosspostable": false,
+  "is_meta": false,
+  "is_original_content": false,
+  "is_reddit_media_domain": true,
+  "is_robot_indexable": true,
+  "is_self": false,
+  "is_video": false,
+  "likes": null,
+  "link_flair_background_color": "",
+  "link_flair_css_class": null,
+  "link_flair_richtext": [],
+  "link_flair_text": null,
+  "link_flair_text_color": "dark",
+  "link_flair_type": "text",
+  "locked": false,
+  "media": null,
+  "media_embed": {},
+  "media_only": false,
+  "mod_note": null,
+  "mod_reason_by": null,
+  "mod_reason_title": null,
+  "mod_reports": [],
+  "name": "t3_11vgu0h",
+  "no_follow": false,
+  "num_comments": 44,
+  "num_crossposts": 0,
+  "num_reports": null,
+  "over_18": false,
+  "parent_whitelist_status": "all_ads",
+  "permalink": "/r/aww/comments/11vgu0h/a_cheetahs_family_portrait/",
+  "pinned": false,
+  "post_hint": "image",
+  "preview": {
+    "enabled": true,
+    "images": [
+      {
+        "id": "QV5XZrL09dM4GqW9YTVCCVbcJTXdHwo_64zA2DdUbbw",
+        "resolutions": [
+          {
+            "height": 108,
+            "url": "https://preview.redd.it/tqvuauq7jpoa1.jpg?width=108\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=0d472cd3627cac9d60a1229b9e691ce4d3282f7a",
+            "width": 108
+          },
+          {
+            "height": 216,
+            "url": "https://preview.redd.it/tqvuauq7jpoa1.jpg?width=216\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=96718f7239c1f6d5a0a27d05c22e2235e7836204",
+            "width": 216
+          },
+          {
+            "height": 320,
+            "url": "https://preview.redd.it/tqvuauq7jpoa1.jpg?width=320\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=08cce8badf1c5319ec07c098b4fa1a4bca6ac7e0",
+            "width": 320
+          },
+          {
+            "height": 640,
+            "url": "https://preview.redd.it/tqvuauq7jpoa1.jpg?width=640\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=ca2e84c87389c0b181dde77d3003275970938e8d",
+            "width": 640
+          },
+          {
+            "height": 960,
+            "url": "https://preview.redd.it/tqvuauq7jpoa1.jpg?width=960\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=f0479753aff4316a73b0fcb7d2ef91c8d383aa62",
+            "width": 960
+          },
+          {
+            "height": 1080,
+            "url": "https://preview.redd.it/tqvuauq7jpoa1.jpg?width=1080\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=3c954085f751f55d19c925e85a4263487e3f7932",
+            "width": 1080
+          }
+        ],
+        "source": {
+          "height": 1280,
+          "url": "https://preview.redd.it/tqvuauq7jpoa1.jpg?auto=webp\u0026amp;v=enabled\u0026amp;s=23ce9f2761d2e7fb341b98deceaf2284dbb37a81",
+          "width": 1280
+        },
+        "variants": {}
+      }
+    ]
+  },
+  "pwls": 6,
+  "quarantine": false,
+  "removal_reason": null,
+  "removed_by": null,
+  "removed_by_category": null,
+  "report_reasons": null,
+  "saved": false,
+  "score": 7946,
+  "secure_media": null,
+  "secure_media_embed": {},
+  "selftext": "",
+  "selftext_html": null,
+  "send_replies": true,
+  "spoiler": false,
+  "stickied": false,
+  "subreddit": "aww",
+  "subreddit_id": "t5_2qh1o",
+  "subreddit_name_prefixed": "r/aww",
+  "subreddit_subscribers": 33661634,
+  "subreddit_type": "public",
+  "suggested_sort": null,
+  "thumbnail": "https://b.thumbs.redditmedia.com/hdExskUYo2pn4mTin7QoYGYkll6RGVUcrcMyIQXMdas.jpg",
+  "thumbnail_height": 140,
+  "thumbnail_width": 140,
+  "title": "A cheetahs family portrait.",
+  "top_awarded_type": null,
+  "total_awards_received": 1,
+  "treatment_tags": [],
+  "ups": 7946,
+  "upvote_ratio": 0.99,
+  "url": "https://i.redd.it/tqvuauq7jpoa1.jpg",
+  "url_overridden_by_dest": "https://i.redd.it/tqvuauq7jpoa1.jpg",
+  "user_reports": [],
+  "view_count": null,
+  "visited": false,
+  "whitelist_status": "all_ads",
+  "wls": 6
+}

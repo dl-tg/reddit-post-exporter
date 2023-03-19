@@ -1,0 +1,110 @@
+{
+  "data": {
+    "all_awardings": [],
+    "approved_at_utc": null,
+    "approved_by": null,
+    "archived": false,
+    "associated_award": null,
+    "author": "hoosarestillchamps",
+    "author_flair_background_color": null,
+    "author_flair_css_class": null,
+    "author_flair_richtext": [],
+    "author_flair_template_id": null,
+    "author_flair_text": null,
+    "author_flair_text_color": null,
+    "author_flair_type": "text",
+    "author_fullname": "t2_4x12m4c4",
+    "author_is_blocked": false,
+    "author_patreon_flair": false,
+    "author_premium": false,
+    "awarders": [],
+    "banned_at_utc": null,
+    "banned_by": null,
+    "body": "https://preview.redd.it/9wfoy5yfknoa1.jpeg?width=720\u0026amp;format=pjpg\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=8357b85c170870e45b63144385e9c80549b43630\n\nMy little poodle",
+    "body_html": "\u0026lt;div class=\"md\"\u0026gt;\u0026lt;p\u0026gt;\u0026lt;a href=\"https://preview.redd.it/9wfoy5yfknoa1.jpeg?width=720\u0026amp;amp;format=pjpg\u0026amp;amp;auto=webp\u0026amp;amp;v=enabled\u0026amp;amp;s=8357b85c170870e45b63144385e9c80549b43630\"\u0026gt;https://preview.redd.it/9wfoy5yfknoa1.jpeg?width=720\u0026amp;amp;format=pjpg\u0026amp;amp;auto=webp\u0026amp;amp;v=enabled\u0026amp;amp;s=8357b85c170870e45b63144385e9c80549b43630\u0026lt;/a\u0026gt;\u0026lt;/p\u0026gt;\n\n\u0026lt;p\u0026gt;My little poodle\u0026lt;/p\u0026gt;\n\u0026lt;/div\u0026gt;",
+    "can_gild": true,
+    "can_mod_post": false,
+    "collapsed": false,
+    "collapsed_because_crowd_control": null,
+    "collapsed_reason": null,
+    "collapsed_reason_code": null,
+    "comment_type": null,
+    "controversiality": 0,
+    "created": 1679194927,
+    "created_utc": 1679194927,
+    "depth": 0,
+    "distinguished": null,
+    "downs": 0,
+    "edited": false,
+    "gilded": 0,
+    "gildings": {},
+    "id": "jcs2op0",
+    "is_submitter": false,
+    "likes": null,
+    "link_id": "t3_11v4h3w",
+    "locked": false,
+    "media_metadata": {
+      "9wfoy5yfknoa1": {
+        "e": "Image",
+        "id": "9wfoy5yfknoa1",
+        "m": "image/jpeg",
+        "p": [
+          {
+            "u": "https://preview.redd.it/9wfoy5yfknoa1.jpeg?width=108\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=900c63e1d19854794954c7615e33a4ba1ffab0c2",
+            "x": 108,
+            "y": 72
+          },
+          {
+            "u": "https://preview.redd.it/9wfoy5yfknoa1.jpeg?width=216\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=a6de8b5ffd8d602badf4cfea40664d8c2010a957",
+            "x": 216,
+            "y": 144
+          },
+          {
+            "u": "https://preview.redd.it/9wfoy5yfknoa1.jpeg?width=320\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=c8849583067091ba33c8cbe382594af72e86abbc",
+            "x": 320,
+            "y": 213
+          },
+          {
+            "u": "https://preview.redd.it/9wfoy5yfknoa1.jpeg?width=640\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=452f45dc754bf8b4fff8ce938555a07069181b00",
+            "x": 640,
+            "y": 426
+          }
+        ],
+        "s": {
+          "u": "https://preview.redd.it/9wfoy5yfknoa1.jpeg?width=720\u0026amp;format=pjpg\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=8357b85c170870e45b63144385e9c80549b43630",
+          "x": 720,
+          "y": 480
+        },
+        "status": "valid"
+      }
+    },
+    "mod_note": null,
+    "mod_reason_by": null,
+    "mod_reason_title": null,
+    "mod_reports": [],
+    "name": "t1_jcs2op0",
+    "no_follow": false,
+    "num_reports": null,
+    "parent_id": "t3_11v4h3w",
+    "permalink": "/r/aww/comments/11v4h3w/oc_my_pitbullrottweilercane_corso_mix/jcs2op0/",
+    "removal_reason": null,
+    "replies": "",
+    "report_reasons": null,
+    "saved": false,
+    "score": 1,
+    "score_hidden": true,
+    "send_replies": true,
+    "stickied": false,
+    "subreddit": "aww",
+    "subreddit_id": "t5_2qh1o",
+    "subreddit_name_prefixed": "r/aww",
+    "subreddit_type": "public",
+    "top_awarded_type": null,
+    "total_awards_received": 0,
+    "treatment_tags": [],
+    "unrepliable_reason": null,
+    "ups": 1,
+    "user_reports": []
+  },
+  "kind": "t1"
+}

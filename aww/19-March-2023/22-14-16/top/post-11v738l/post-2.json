@@ -1,0 +1,242 @@
+{
+  "all_awardings": [
+    {
+      "award_sub_type": "PREMIUM",
+      "award_type": "global",
+      "awardings_required_to_grant_benefits": null,
+      "coin_price": 30,
+      "coin_reward": 0,
+      "count": 1,
+      "days_of_drip_extension": null,
+      "days_of_premium": null,
+      "description": "A glittering stamp for a feel-good thing",
+      "end_date": null,
+      "giver_coin_reward": null,
+      "icon_format": null,
+      "icon_height": 2048,
+      "icon_url": "https://i.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png",
+      "icon_width": 2048,
+      "id": "award_c4b2e438-16bb-4568-88e7-7893b7662944",
+      "is_enabled": true,
+      "is_new": false,
+      "name": "Wholesome Seal of Approval",
+      "penny_donate": null,
+      "penny_price": null,
+      "resized_icons": [
+        {
+          "height": 16,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=16\u0026amp;height=16\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=703f779c36fa6c24a87048219c8ad79c38f588dc",
+          "width": 16
+        },
+        {
+          "height": 32,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=32\u0026amp;height=32\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=f1353fd49988371ae4b98114d2f30ad3abd2435e",
+          "width": 32
+        },
+        {
+          "height": 48,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=48\u0026amp;height=48\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=a6325378b5acbd6940233feeeab0d6cc936467c9",
+          "width": 48
+        },
+        {
+          "height": 64,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=64\u0026amp;height=64\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=aa1d8321e60dc611ebc686f814b0ad996d1056c5",
+          "width": 64
+        },
+        {
+          "height": 128,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=128\u0026amp;height=128\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=4c5a9a5cf1591f7074c67a67339e34fbf34a3107",
+          "width": 128
+        }
+      ],
+      "resized_static_icons": [
+        {
+          "height": 16,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=16\u0026amp;height=16\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=703f779c36fa6c24a87048219c8ad79c38f588dc",
+          "width": 16
+        },
+        {
+          "height": 32,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=32\u0026amp;height=32\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=f1353fd49988371ae4b98114d2f30ad3abd2435e",
+          "width": 32
+        },
+        {
+          "height": 48,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=48\u0026amp;height=48\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=a6325378b5acbd6940233feeeab0d6cc936467c9",
+          "width": 48
+        },
+        {
+          "height": 64,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=64\u0026amp;height=64\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=aa1d8321e60dc611ebc686f814b0ad996d1056c5",
+          "width": 64
+        },
+        {
+          "height": 128,
+          "url": "https://preview.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png?width=128\u0026amp;height=128\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=4c5a9a5cf1591f7074c67a67339e34fbf34a3107",
+          "width": 128
+        }
+      ],
+      "start_date": null,
+      "static_icon_height": 2048,
+      "static_icon_url": "https://i.redd.it/award_images/t5_22cerq/b9ks3a5k7jj41_WholesomeSealofApproval.png",
+      "static_icon_width": 2048,
+      "sticky_duration_seconds": null,
+      "subreddit_coin_reward": 0,
+      "subreddit_id": null,
+      "tiers_by_required_awardings": null
+    }
+  ],
+  "allow_live_comments": true,
+  "approved_at_utc": null,
+  "approved_by": null,
+  "archived": false,
+  "author": "doesamulletmakeaman",
+  "author_flair_background_color": null,
+  "author_flair_css_class": null,
+  "author_flair_richtext": [],
+  "author_flair_template_id": null,
+  "author_flair_text": null,
+  "author_flair_text_color": null,
+  "author_flair_type": "text",
+  "author_fullname": "t2_1q6omeco",
+  "author_is_blocked": false,
+  "author_patreon_flair": false,
+  "author_premium": true,
+  "awarders": [],
+  "banned_at_utc": null,
+  "banned_by": null,
+  "can_gild": false,
+  "can_mod_post": false,
+  "category": null,
+  "clicked": false,
+  "content_categories": null,
+  "contest_mode": false,
+  "created": 1679188678,
+  "created_utc": 1679188678,
+  "discussion_type": null,
+  "distinguished": null,
+  "domain": "i.redd.it",
+  "downs": 0,
+  "edited": false,
+  "gilded": 0,
+  "gildings": {},
+  "hidden": false,
+  "hide_score": false,
+  "id": "11v738l",
+  "is_created_from_ads_ui": false,
+  "is_crosspostable": false,
+  "is_meta": false,
+  "is_original_content": false,
+  "is_reddit_media_domain": true,
+  "is_robot_indexable": true,
+  "is_self": false,
+  "is_video": false,
+  "likes": null,
+  "link_flair_background_color": "",
+  "link_flair_css_class": null,
+  "link_flair_richtext": [],
+  "link_flair_text": null,
+  "link_flair_text_color": "dark",
+  "link_flair_type": "text",
+  "locked": false,
+  "media": null,
+  "media_embed": {},
+  "media_only": false,
+  "mod_note": null,
+  "mod_reason_by": null,
+  "mod_reason_title": null,
+  "mod_reports": [],
+  "name": "t3_11v738l",
+  "no_follow": false,
+  "num_comments": 387,
+  "num_crossposts": 2,
+  "num_reports": null,
+  "over_18": false,
+  "parent_whitelist_status": "all_ads",
+  "permalink": "/r/aww/comments/11v738l/a_man_followed_me_home_and_these_two_logs_chased/",
+  "pinned": false,
+  "post_hint": "image",
+  "preview": {
+    "enabled": true,
+    "images": [
+      {
+        "id": "V3y2pYOSfUBNED2O1K4WrT_T4vr6xUWWH27VGT7aTk0",
+        "resolutions": [
+          {
+            "height": 81,
+            "url": "https://preview.redd.it/il6zrdd22noa1.jpg?width=108\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=7682818a5b8d427d3c676d62a72917c2349c2d1c",
+            "width": 108
+          },
+          {
+            "height": 162,
+            "url": "https://preview.redd.it/il6zrdd22noa1.jpg?width=216\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=804bf4aaafb16adab5ac7ae447340789311da6a1",
+            "width": 216
+          },
+          {
+            "height": 240,
+            "url": "https://preview.redd.it/il6zrdd22noa1.jpg?width=320\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=2b495dbb49c87182edaa1daf465757e25daea8af",
+            "width": 320
+          },
+          {
+            "height": 480,
+            "url": "https://preview.redd.it/il6zrdd22noa1.jpg?width=640\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=051786ca3510f5a55f9f4842cf4356cea7d334b9",
+            "width": 640
+          },
+          {
+            "height": 720,
+            "url": "https://preview.redd.it/il6zrdd22noa1.jpg?width=960\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=51c7a4bda674ce56b12208b66611e8962c340e0c",
+            "width": 960
+          },
+          {
+            "height": 810,
+            "url": "https://preview.redd.it/il6zrdd22noa1.jpg?width=1080\u0026amp;crop=smart\u0026amp;auto=webp\u0026amp;v=enabled\u0026amp;s=a4ed0a375a574fe3a7f09496a99f5d9c2bb10486",
+            "width": 1080
+          }
+        ],
+        "source": {
+          "height": 3024,
+          "url": "https://preview.redd.it/il6zrdd22noa1.jpg?auto=webp\u0026amp;v=enabled\u0026amp;s=ffb3c296a1d3ab96957826f08b815113c1dc25f7",
+          "width": 4032
+        },
+        "variants": {}
+      }
+    ]
+  },
+  "pwls": 6,
+  "quarantine": false,
+  "removal_reason": null,
+  "removed_by": null,
+  "removed_by_category": null,
+  "report_reasons": null,
+  "saved": false,
+  "score": 13710,
+  "secure_media": null,
+  "secure_media_embed": {},
+  "selftext": "",
+  "selftext_html": null,
+  "send_replies": true,
+  "spoiler": false,
+  "stickied": false,
+  "subreddit": "aww",
+  "subreddit_id": "t5_2qh1o",
+  "subreddit_name_prefixed": "r/aww",
+  "subreddit_subscribers": 33661634,
+  "subreddit_type": "public",
+  "suggested_sort": null,
+  "thumbnail": "https://b.thumbs.redditmedia.com/gHCFdaOdFhQgOoY0Y9sdftmJCW8WEWw-97XhDjRre6I.jpg",
+  "thumbnail_height": 105,
+  "thumbnail_width": 140,
+  "title": "A man followed me home and these two logs chased him right back to his truck. Good dogs 🧡",
+  "top_awarded_type": null,
+  "total_awards_received": 1,
+  "treatment_tags": [],
+  "ups": 13710,
+  "upvote_ratio": 0.96,
+  "url": "https://i.redd.it/il6zrdd22noa1.jpg",
+  "url_overridden_by_dest": "https://i.redd.it/il6zrdd22noa1.jpg",
+  "user_reports": [],
+  "view_count": null,
+  "visited": false,
+  "whitelist_status": "all_ads",
+  "wls": 6
+}
