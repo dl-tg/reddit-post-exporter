@@ -61,9 +61,9 @@ The program first checks if the given subreddit is valid by sending a GET reques
 
 It then constructs a URL to fetch the posts from, based on the input subreddit, maximum amount of posts (specified in `limit` flag), and category ID. The URL is sent as a GET request to the Reddit API, and the response JSON data is parsed to extract the posts.
 
-For each post, the program creates a directory structure to save its JSON data and comments. The path for a post is structured as follows: `<subreddit>/<date>/<time>/<category>/<postID>`. The post's JSON data is saved in a file named post-<postID>.json.
+For each post, it creates a directory structure to save its JSON data and comments. The path for a post is structured like: `<subreddit>/<date>/<time>/<category>/<postID>`. The post's JSON data is saved in `post-<postID>.json`.
 
-If the post has comments, it creates a comments directory within the post's directory and saves each comment's JSON data in a file named comment-<commentID>.json. The comments are fetched by sending a GET request to the post's permalink with the .json extension.
+If the post has comments, it creates a `comments` directory within the post's directory and saves each comment's JSON data in `comment-<index>.json`. The comments are fetched by sending a GET request to the post's permalink with the .json extension.
 
 ## Disclaimer
 This program is not affiliated with or endorsed by Reddit. Use at your own risk.
