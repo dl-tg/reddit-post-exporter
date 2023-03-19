@@ -1,5 +1,5 @@
 # Reddit Post Exporter
-Fetch and save the JSON data of Reddit posts and their corresponding comments, for a given subreddit and specific category (top, controversial, hot or rising) up to a certain limit.
+Fetch and save the JSON data of Reddit posts and their comments, from specified subreddit and specific category (top, controversial, hot or rising) up to a certain limit, which is specified by the user, too.
 
 ## Prerequisites
 - Go
