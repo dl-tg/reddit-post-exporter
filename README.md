@@ -40,14 +40,15 @@ reddit-post-exporter -subreddit golang -limit 10 -categoryID 0
 ```
 This will fetch 10 posts from "Top" sort from the "golang" subreddit and save their JSON data, along with their comments, in the following directory structure:
 ```
-└── Day-Month-Year
-    └── Hour-Minutes-Seconds
-        └── sort (e.g rising)
-            ├── post-<postID>.json
-            └── comments
-                ├── comment-<index>.json
-                ├── comment-<index>.json
-                └── ...
+└── <subreddit>
+    └── Day-Month-Year
+        └── Hour-Minutes-Seconds
+            └── Sort (e.g rising)
+                └── posts
+                    └── post-<postID>
+                        ├── post-<index>.json
+                        └── comments
+                            └── comment-<index>.json
 ```
 
 ## How it works
