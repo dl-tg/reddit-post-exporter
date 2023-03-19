@@ -68,3 +68,7 @@ If you find a bug or have a suggestion for this program, please feel free to ope
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Notes
+If you want to remove the delay while exporting comments, go to line 183 and remove `time.Sleep(1 * time.Second)`.
+You may as well adjust the delay to your own preference.
