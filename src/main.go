@@ -118,16 +118,16 @@ func main() {
 		jsonData, err := json.MarshalIndent(post, "", "  ")
 		checkError(err)
 
-		var date_now string = fmt.Sprintf("%d-%v-%d", day, month, year)
-		var time_now string = fmt.Sprintf("%d-%d-%d", hour, minute, second)
+		var dateNow string = fmt.Sprintf("%d-%v-%d", day, month, year)
+		var timeNow string = fmt.Sprintf("%d-%d-%d", hour, minute, second)
 		var filename string = fmt.Sprintf("post-%d.json", i)
 
-		path := filepath.Join(".", subreddit, date_now, time_now, categoryID[id], fmt.Sprintf("post-%s", post["id"].(string)))
-		file_path := filepath.Join(path, filename)
+		path := filepath.Join(".", subreddit, dateNow, timeNow, categoryID[id], fmt.Sprintf("post-%s", post["id"].(string)))
+		filePath := filepath.Join(path, filename)
 
 		checkError(os.MkdirAll(path, 0755))
 
-		file, err := os.Create(file_path)
+		file, err := os.Create(filePath)
 		checkError(err)
 
 		defer file.Close()
@@ -162,8 +162,8 @@ func main() {
 
 			checkError(err)
 
-			cf_client := &http.Client{}
-			commentsRes, err := cf_client.Do(commentsReq)
+			cfClient := &http.Client{}
+			commentsRes, err := cfClient.Do(commentsReq)
 			checkError(err)
 
 			defer commentsRes.Body.Close()
