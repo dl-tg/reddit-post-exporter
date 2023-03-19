@@ -21,7 +21,7 @@ func checkError(err error) {
 	}
 }
 
-func subredditExists(subreddit string) bool {
+func subredditValid(subreddit string) bool {
 	url := fmt.Sprintf("https://www.reddit.com/r/%s/about.json", subreddit)
 	resp, err := http.Get(url)
 	if err != nil {
@@ -59,9 +59,8 @@ func main() {
 	flag.IntVar(&id, "categoryID", 0, "Category of posts to fetch\n0 - top\n1 - controversial\n2 - hot\n3 - rising")
 
 	flag.Parse()
-	fmt.Println(subredditExists(subreddit))
 
-	if !subredditExists(subreddit) {
+	if !subredditValid(subreddit) {
 		log.Fatal("Specified subreddit does not exist!")
 	}
 
