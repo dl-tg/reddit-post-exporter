@@ -1,6 +1,11 @@
 # Reddit Post Exporter
 Fetch and save the JSON data of Reddit posts and their comments, from specified subreddit and specific category (top, controversial, hot or rising) up to a certain limit, which is specified by the user, too.
 
+Note that it will export only those posts that fit the category. For example, I managed to export 100 posts and ~4,565 comments respectively from Hot category in AskReddit.
+
+### Example
+Check [example](https://github.com/sncelta/reddit-post-exporter/tree/example) branch to see results.
+
 ## Prerequisites
 - Go
 - Git (optional)
@@ -68,7 +73,3 @@ If you find a bug or have a suggestion for this program, please feel free to ope
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Notes
-If you want to remove the delay while exporting comments, go to line 183 and remove `time.Sleep(1 * time.Second)`.
-You may as well adjust the delay to your own preference.
