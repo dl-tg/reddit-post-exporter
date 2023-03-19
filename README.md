@@ -43,7 +43,7 @@ Where:
 ```
 reddit-post-exporter -subreddit=golang -limit=10 -categoryID=0
 ```
-This will fetch 10 posts from "Top" sort from the "golang" subreddit and save their JSON data, along with their comments, in the following directory structure:
+This will fetch 10 posts from Top category from golang subreddit and save their JSON data, along with their comments, in the following directory structure:
 ```
 └── <subreddit>
     └── Day-Month-Year
