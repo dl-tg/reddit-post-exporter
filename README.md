@@ -2,7 +2,8 @@
 Fetch and save the JSON data of Reddit posts and their comments, from specified subreddit and specific category (top, controversial, hot or rising) up to a certain limit, which is specified by the user, too.
 
 ### Example
-Head to the [example](https://github.com/sncelta/reddit-post-exporter/tree/example) branch to see the output of the program.
+Check [example](https://github.com/sncelta/reddit-post-exporter/tree/example) branch to see results.
+
 ## Prerequisites
 - Go
 - Git (optional)
