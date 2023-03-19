@@ -22,7 +22,7 @@ git clone https://github.com/sncelta/reddit-post-exporter.git
 
 2. Navigate to `src` folder and run `go build` in terminal. You may skip building the program if you have Go installed and want to run it from source.
 
-That will create an executable called `reddit-post-exporter`.
+That will create an executable called `reddit-post-exporter`
 
 If you don't feel like building it from source, go to Releases page.
 
@@ -57,7 +57,7 @@ This will fetch 10 posts from "Top" sort from the "golang" subreddit and save th
 ```
 
 ## How it works
-The program first checks if the given subreddit exists by sending a GET request to `https://www.reddit.com/r/<subreddit>/about.json`. If the request is successful and the response contains a "data" field, then the subreddit exists.
+The program first checks if the given subreddit is valid by sending a GET request to `https://www.reddit.com/r/<subreddit>/about.json`. If the request is successful and the response contains a "data" field, then the subreddit is valid.
 
 It then constructs a URL to fetch the posts from, based on the input subreddit, maximum amount of posts (specified in `limit` flag), and category ID. The URL is sent as a GET request to the Reddit API, and the response JSON data is parsed to extract the posts.
 
