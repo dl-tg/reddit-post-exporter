@@ -43,7 +43,7 @@ This will fetch 10 posts from "Top" sort from the "golang" subreddit and save th
 └── <subreddit>
     └── Day-Month-Year
         └── Hour-Minutes-Seconds
-            └── Sort (e.g rising)
+            └── Category (e.g rising)
                 └── posts
                     └── post-<postID>
                         ├── post-<index>.json
@@ -54,7 +54,7 @@ This will fetch 10 posts from "Top" sort from the "golang" subreddit and save th
 ## How it works
 The program first checks if the given subreddit exists by sending a GET request to `https://www.reddit.com/r/<subreddit>/about.json`. If the request is successful and the response contains a "data" field, then the subreddit exists.
 
-It then constructs a URL to fetch the posts from, based on the input subreddit, maximum amount of posts, and category ID. The URL is sent as a GET request to the Reddit API, and the response JSON data is parsed to extract the posts.
+It then constructs a URL to fetch the posts from, based on the input subreddit, maximum amount of posts (specified in `limit` flag), and category ID. The URL is sent as a GET request to the Reddit API, and the response JSON data is parsed to extract the posts.
 
 For each post, the program creates a directory structure to save its JSON data and comments. The path for a post is structured as follows: `<subreddit>/<date>/<time>/<category>/<postID>`. The post's JSON data is saved in a file named post-<postID>.json.
 
