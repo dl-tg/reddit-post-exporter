@@ -56,7 +56,7 @@ func main() {
 
 	flag.StringVar(&subreddit, "subreddit", "programming", "Subreddit to fetch posts from")
 	flag.IntVar(&limit, "limit", 5, "Amount of posts to fetch")
-	flag.IntVar(&id, "categoryID", 0, "Category of posts to fetch\n1 - top\n2 - controversial\n3 - hot\n4 - rising")
+	flag.IntVar(&id, "categoryID", 0, "Category of posts to fetch\n0 - top\n1 - controversial\n2 - hot\n3 - rising")
 
 	flag.Parse()
 	fmt.Println(subredditExists(subreddit))
