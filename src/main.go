@@ -61,7 +61,7 @@ func main() {
 	flag.Parse()
 
 	if !subredditValid(subreddit) {
-		log.Fatal("Specified subreddit does not exist!")
+		log.Fatal("Specified subreddit is invalid. Are you sure it exists or isn't banned/private?")
 	}
 
 	id = int(math.Min(float64(id), 3))
