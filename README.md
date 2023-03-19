@@ -30,7 +30,7 @@ If you don't feel like building it from source, go to Releases page.
 Run the following command:
 
 ```
-reddit-post-exporter -subreddit <subreddit> -limit <limit> -categoryID <categoryID>
+reddit-post-exporter -subreddit=<subreddit> -limit=<limit> -categoryID=<categoryID>
 ```
 Where:
 
@@ -41,7 +41,7 @@ Where:
 ### Example
 
 ```
-reddit-post-exporter -subreddit golang -limit 10 -categoryID 0
+reddit-post-exporter -subreddit=golang -limit=10 -categoryID=0
 ```
 This will fetch 10 posts from "Top" sort from the "golang" subreddit and save their JSON data, along with their comments, in the following directory structure:
 ```
