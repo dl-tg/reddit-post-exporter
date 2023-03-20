@@ -6,6 +6,9 @@ Note that it will export only those posts that fit the category. For example, I 
 ### Example
 Check [example](https://github.com/sncelta/reddit-post-exporter/tree/example) branch to see results.
 
+### Notes
+If you want to know what each key in comment/post JSON means, read [here](https://www.reddit.com/dev/api/)
+
 ## Prerequisites
 - Go
 - Git (optional)
