@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"io/fs"
 	"log"
 	"math"
 	"net/http"
@@ -16,6 +17,7 @@ import (
 var categoryID = [4]string{"top", "controversial", "hot", "rising"}
 
 // I don't want to set f*ckton of headers for every request...
+// http.NewRequest wrapper with additional headers
 
 func rpe_request(method, path string, body io.Reader) (*http.Request, error) {
 	req, err := http.NewRequest(method, path, body)
@@ -41,13 +43,25 @@ func rpe_request(method, path string, body io.Reader) (*http.Request, error) {
 
 	return req, nil
 }
+
+// Error handler function
 func checkError(err error) {
-	// Error handler function
 	if err != nil {
 		log.Fatal(err)
 	}
 }
 
+/* Wrapper function for creating directories with permissions and instantly
+saving file to the directory with error handling */
+
+func saveToDir(path, filename string, perm fs.FileMode) *os.File {
+	checkError(os.MkdirAll(path, perm))
+
+	file, err := os.Create(filepath.Join(".", path, filename))
+	checkError(err)
+
+	return file
+}
 func subredditValid(subreddit string) bool {
 	// Validate the subreddit to avoid unexpected errors by checking if it has "data" key
 	url := fmt.Sprintf("https://www.reddit.com/r/%s/about.json", subreddit)
@@ -70,7 +84,7 @@ func subredditValid(subreddit string) bool {
 	return true
 }
 
-func fetchPosts(subreddit string, id int, limit int) {
+func fetchPosts(subreddit string, id, limit int, export_comments bool) {
 	// Construct the URL to get posts from, based on input subreddit, maximum amount of posts and category id
 	var url string = fmt.Sprintf("https://www.reddit.com/r/%s/%s.json?limit=%d", subreddit, categoryID[id], limit)
 
@@ -78,10 +92,17 @@ func fetchPosts(subreddit string, id int, limit int) {
 	req, err := rpe_request("GET", url, nil)
 	checkError(err)
 
+	/* Sends an HTTP request and returns an HTTP response, following policy
+	(such as redirects, cookies, auth) as configured on the client. */
+
 	res, err := client.Do(req)
 	checkError(err)
 
 	defer res.Body.Close()
+
+	if res.StatusCode != http.StatusOK {
+		log.Fatalf("HTTP request failed with status code %d", res.StatusCode)
+	}
 
 	body, err := io.ReadAll(res.Body)
 	checkError(err)
@@ -109,31 +130,24 @@ func fetchPosts(subreddit string, id int, limit int) {
 		posts = append(posts, post)
 	}
 
-	exportPosts(posts, subreddit, id)
+	exportPosts(posts, subreddit, id, export_comments)
 }
 
-func exportPosts(posts []map[string]interface{}, subreddit string, id int) {
+func exportPosts(posts []map[string]interface{}, subreddit string, id int, export_comments bool) {
 	now := time.Now()
-
-	day, month, year := now.Day(), now.Month(), now.Year()
-	hour, minute, second := now.Hour(), now.Minute(), now.Second()
 
 	for i, post := range posts {
 		// Iterate over each post in the posts slice
 		jsonData, err := json.MarshalIndent(post, "", "  ")
 		checkError(err)
 
-		var dateNow string = fmt.Sprintf("%d-%v-%d", day, month, year)
-		var timeNow string = fmt.Sprintf("%d-%d-%d", hour, minute, second)
+		var dateNow string = now.Format("01-Jan-2006")
+		var timeNow string = now.Format("15-04-05")
 		var filename string = fmt.Sprintf("post-%d.json", i)
 
-		path := filepath.Join(".", subreddit, dateNow, timeNow, categoryID[id], fmt.Sprintf("post-%s", post["id"].(string)))
-		filePath := filepath.Join(path, filename)
+		var path string = filepath.Join(".", subreddit, dateNow, timeNow, categoryID[id], fmt.Sprintf("post-%s", post["id"].(string)))
 
-		checkError(os.MkdirAll(path, 0755))
-
-		file, err := os.Create(filePath)
-		checkError(err)
+		file := saveToDir(path, filename, 0700)
 
 		defer file.Close()
 
@@ -142,7 +156,9 @@ func exportPosts(posts []map[string]interface{}, subreddit string, id int) {
 
 		fmt.Printf("Saved post %d to path %s\nBytes: %d\n", i, path, n)
 
-		fetchComments(post, path, i)
+		if export_comments {
+			fetchComments(post, path, i)
+		}
 	}
 }
 
@@ -152,7 +168,7 @@ func fetchComments(post map[string]interface{}, path string, postIndex int) {
 		permalink := post["permalink"].(string) + ".json"
 
 		// Construct the URL for the post's comments using post's permalink key
-		commentsURL := "https://www.reddit.com" + permalink
+		commentsURL := fmt.Sprintf("https://www.reddit.com%s", permalink)
 		commentsReq, err := rpe_request("GET", commentsURL, nil)
 		checkError(err)
 
@@ -173,7 +189,6 @@ func fetchComments(post map[string]interface{}, path string, postIndex int) {
 }
 func exportComments(commentsData []interface{}, path string, postIndex int) {
 	commentPath := filepath.Join(path, "comments")
-	os.MkdirAll(commentPath, 0755)
 
 	if len(commentsData) >= 2 {
 		data, ok := commentsData[1].(map[string]interface{})["data"].(map[string]interface{})
@@ -186,8 +201,7 @@ func exportComments(commentsData []interface{}, path string, postIndex int) {
 					checkError(err)
 
 					commentFilename := fmt.Sprintf("comment-%d.json", j)
-					commentFile, err := os.Create(filepath.Join(commentPath, commentFilename))
-					checkError(err)
+					commentFile := saveToDir(commentPath, commentFilename, 0700)
 
 					defer commentFile.Close()
 
@@ -204,12 +218,13 @@ func exportComments(commentsData []interface{}, path string, postIndex int) {
 func main() {
 	// Define flags
 	var subreddit string
-	var limit int
-	var id int
+	var limit, id int
+	var export_comments bool
 
 	flag.StringVar(&subreddit, "subreddit", "programming", "Subreddit to fetch posts from")
 	flag.IntVar(&limit, "limit", 5, "Amount of posts to fetch")
 	flag.IntVar(&id, "categoryID", 0, "Category of posts to fetch\n0 - top\n1 - controversial\n2 - hot\n3 - rising")
+	flag.BoolVar(&export_comments, "exportComments", true, "Toggle comment exporting")
 
 	flag.Parse()
 
@@ -219,6 +234,5 @@ func main() {
 
 	id = int(math.Min(float64(id), 3))
 
-	fetchPosts(subreddit, id, limit)
-
+	fetchPosts(subreddit, id, limit, export_comments)
 }
