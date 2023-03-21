@@ -26,6 +26,7 @@ func rpe_request(method, path string, body io.Reader) (*http.Request, error) {
 		return nil, err
 	}
 
+	// Set headers to prevent Reddit from blocking and rate-limiting
 	req.Header.Set("authority", "www.reddit.com")
 	req.Header.Set("pragma", "no-cache")
 	req.Header.Set("cache-control", "no-cache")
@@ -63,25 +64,41 @@ func saveToDir(path, filename string, perm fs.FileMode) *os.File {
 	return file
 }
 func subredditValid(subreddit string) bool {
-	// Validate the subreddit to avoid unexpected errors by checking if it has "data" key
+	// Construct the URL of the subreddit's about.json page
 	url := fmt.Sprintf("https://www.reddit.com/r/%s/about.json", subreddit)
-	resp, err := http.Get(url)
+
+	client := &http.Client{}
+
+	req, err := rpe_request("GET", url, nil)
 	if err != nil {
+		log.Fatal(err)
+		return false
+	}
+
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Fatal(err)
 		return false
 	}
 	defer resp.Body.Close()
 
-	var data map[string]interface{}
+	// Parse the JSON response
+	var data struct {
+		Data struct {
+			PublicDescription string `json:"public_description"`
+			SubredditType     string `json:"subreddit_type"`
+			Subscribers       int    `json:"subscribers"`
+		} `json:"data"`
+	}
 	err = json.NewDecoder(resp.Body).Decode(&data)
 	if err != nil {
 		return false
 	}
 
-	if _, ok := data["data"]; !ok {
-		return false
-	}
+	/* Check if the subreddit exists and is public.
+	If it doesn't exist, it won't have the Subscribers field, thus it will return false */
 
-	return true
+	return data.Data.Subscribers >= 0 && data.Data.SubredditType != "private"
 }
 
 func fetchPosts(subreddit string, id, limit int, export_comments bool) {
