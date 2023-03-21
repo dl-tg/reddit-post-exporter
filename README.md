@@ -1,5 +1,5 @@
 # Reddit Post Exporter
-Fetch and save the JSON data of Reddit posts and their comments, from specified subreddit and specific category (top, controversial, hot or rising) up to a certain limit, which is specified by the user, too, without using additional API wrappers and OAuth2.
+Fetch and export the JSON data of Reddit posts and their comments, from specified subreddit and specific category (top, controversial, hot or rising) up to a certain limit, which is specified by the user, too, without using additional API wrappers, OAuth2, and many other third part libraries/packages/etc. 
 
 Note that it will export only those posts that fit the category. For example, I managed to export 100 posts and ~4,565 comments respectively from Hot category in AskReddit.
 
