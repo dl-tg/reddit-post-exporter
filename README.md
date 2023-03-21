@@ -8,6 +8,7 @@ Check [example](https://github.com/sncelta/reddit-post-exporter/tree/example) br
 
 ### Notes
 If you want to know what each key in comment/post JSON means, read [here](https://www.reddit.com/dev/api/)
+21 March 2023 - Refactor of code. God damn you, "merge branch of *"
 
 ## Prerequisites
 - Go
