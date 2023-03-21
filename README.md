@@ -36,9 +36,12 @@ Run the following command:
 reddit-post-exporter -subreddit=<string> -limit=<int> -categoryID=<int> -exportComments=<bool>
 ```
 Where:
-    1. `subreddit` - The subreddit you want to fetch posts from. (default: "programming")
+    1. `subreddit` - The subreddit you want to fetch posts from. (default: programming)
+    
     2. `limit` - The maximum number of posts to fetch. (default: 5)
+    
     3. `categoryID` - The category of posts to fetch (0 - top, 1 - controversial, 2 - hot, 3 - rising). (default: 0)
+
     4. `exportComments` - Whether to export comments alongside with posts. (default: true)
 
 ### Example
