@@ -1,5 +1,5 @@
 # Reddit Post Exporter
-Fetch and save the JSON data of Reddit posts and their comments, from specified subreddit and specific category (top, controversial, hot or rising) up to a certain limit, which is specified by the user, too, without using additional API wrappers and OAuth2.
+Fetch and export the JSON data of Reddit posts and their comments, from specified subreddit and specific category (top, controversial, hot or rising) up to a certain limit, which is specified by the user, too, without using additional API wrappers, OAuth2, and many other third-party libraries/packages/etc. 
 
 Note that it will export only those posts that fit the category. For example, I managed to export 100 posts and ~4,565 comments respectively from Hot category in AskReddit.
 
@@ -8,6 +8,8 @@ Check [example](https://github.com/sncelta/reddit-post-exporter/tree/example) br
 
 ### Notes
 If you want to know what each key in comment/post JSON means, read [here](https://www.reddit.com/dev/api/)
+
+21 March 2023 - Refactored code. [commit](https://github.com/sncelta/reddit-post-exporter/commit/5f83b00a224368b1089a9aba32e9b97d8b2c1d3f)
 
 ## Prerequisites
 - Go
