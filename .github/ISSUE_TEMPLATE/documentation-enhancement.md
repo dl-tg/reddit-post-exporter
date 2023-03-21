@@ -1,9 +1,9 @@
 ---
 name: Documentation enhancement
-about: Suggest an idea for the documentation
+about: Improve documentation
 title: "[DOCS]"
 labels: documentation
-assignees: ''
+assignees: sncelta
 
 ---
 
