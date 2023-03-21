@@ -9,8 +9,6 @@ Check [example](https://github.com/sncelta/reddit-post-exporter/tree/example) br
 ### Notes
 If you want to know what each key in comment/post JSON means, read [here](https://www.reddit.com/dev/api/)
 
-21 March 2023 - Refactored code. [commit](https://github.com/sncelta/reddit-post-exporter/commit/5f83b00a224368b1089a9aba32e9b97d8b2c1d3f)
-
 ## Prerequisites
 - Go
 - Git (optional)
@@ -35,20 +33,20 @@ If you don't feel like building it from source, go to Releases page.
 Run the following command:
 
 ```
-reddit-post-exporter -subreddit=<subreddit> -limit=<limit> -categoryID=<categoryID>
+reddit-post-exporter -subreddit=<string> -limit=<int> -categoryID=<int> -exportComments=<bool>
 ```
 Where:
-
-    - <subreddit>: The subreddit you want to fetch posts from. (default: "programming")
-    - <limit>: The maximum number of posts to fetch. (default: 5)
-    - <categoryID>: The category of posts to fetch (0 - top, 1 - controversial, 2 - hot, 3 - rising). (default: 0)
+    1. `subreddit` - The subreddit you want to fetch posts from. (default: "programming")
+    2. `limit` - The maximum number of posts to fetch. (default: 5)
+    3. `categoryID` - The category of posts to fetch (0 - top, 1 - controversial, 2 - hot, 3 - rising). (default: 0)
+    4. `exportComments` - Whether to export comments alongside with posts. (default: true)
 
 ### Example
 
 ```
-reddit-post-exporter -subreddit=golang -limit=10 -categoryID=0
+reddit-post-exporter -subreddit=golang -limit=10 -categoryID=0 -exportComments=true
 ```
-This will fetch 10 posts from Top category from golang subreddit and save their JSON data, along with their comments, in the following directory structure:
+This will fetch and export 10 posts from Top category from golang subreddit and save their JSON data, along with their comments (because `exportComments` is true), in the following directory structure:
 ```
 └── <subreddit>
     └── Day-Month-Year
