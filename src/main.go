@@ -14,7 +14,7 @@ import (
 	"time"
 )
 
-var categoryID = [4]string{"top", "controversial", "hot", "rising"}
+var categoryID = [5]string{"new", "top", "controversial", "hot", "rising"}
 
 // I don't want to set f*ckton of headers for every request...
 // http.NewRequest wrapper with additional headers
@@ -99,6 +99,7 @@ func subredditValid(subreddit string) bool {
 	If it doesn't exist, it won't have the Subscribers field, thus it will return false */
 
 	return data.Data.Subscribers >= 0 && data.Data.SubredditType != "private"
+
 }
 
 func fetchPosts(subreddit string, id, limit int, export_comments bool) {
@@ -110,7 +111,7 @@ func fetchPosts(subreddit string, id, limit int, export_comments bool) {
 	checkError(err)
 
 	/* Sends an HTTP request and returns an HTTP response, following policy
-	(such as redirects, cookies, auth) as configured on the client. */
+	   (such as redirects, cookies, auth) as configured on the client. */
 
 	res, err := client.Do(req)
 	checkError(err)
@@ -138,13 +139,11 @@ func fetchPosts(subreddit string, id, limit int, export_comments bool) {
 		log.Fatal(err)
 	}
 
-	// Create an empty slice of maps to hold each post's data
-	posts := []map[string]interface{}{}
+	// Extract data field for the posts
+	posts := make([]map[string]interface{}, len(data.Data.Children))
 
-	// Iterate over each child in the data struct's Children slice, extract its data field and append it to the posts slice
-	for _, child := range data.Data.Children {
-		post := child.Data
-		posts = append(posts, post)
+	for i := range data.Data.Children {
+		posts[i] = data.Data.Children[i].Data
 	}
 
 	exportPosts(posts, subreddit, id, export_comments)
@@ -240,7 +239,7 @@ func main() {
 
 	flag.StringVar(&subreddit, "subreddit", "programming", "Subreddit to fetch posts from")
 	flag.IntVar(&limit, "limit", 5, "Amount of posts to fetch")
-	flag.IntVar(&id, "categoryID", 0, "Category of posts to fetch\n0 - top\n1 - controversial\n2 - hot\n3 - rising")
+	flag.IntVar(&id, "categoryID", 0, "Category of posts to fetch\n0 - new\n1 - top\n2 - controversial\n3 - hot\nr4 - rising")
 	flag.BoolVar(&export_comments, "exportComments", true, "Toggle comment exporting")
 
 	flag.Parse()
