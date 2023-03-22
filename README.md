@@ -1,6 +1,8 @@
 # Reddit Post Exporter
 ![Preview](https://s10.gifyu.com/images/Desktop-3-21-2023-11-33-59-PM.gif)
 
+### Unfortunately, 100 posts is the maximum because of how Reddit works. https://www.reddit.com/dev/api#GET_top see limit property
+
 Fetch and export the JSON data of Reddit posts and their comments if needed, from specified subreddit and specific category (top, controversial, hot or rising) up to a certain limit, which is specified by the user, too, without using additional API wrappers, OAuth2, and many other third-party libraries/packages/etc. 
 
 Note that it will export only those posts that fit the category. For example, I managed to export 100 posts and ~4,565 comments respectively from Hot category in AskReddit.
