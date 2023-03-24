@@ -87,7 +87,7 @@ This will fetch and export 10 posts from Top category from golang subreddit and 
 ```
 
 ## How it works
-The program first checks if the given subreddit is valid by sending a GET request to `https://www.reddit.com/r/<subreddit>/about.json`. If the request is successful and the response contains a "data" field, then the subreddit is valid.
+The program first checks if the given subreddit is valid by sending a GET request to `https://www.reddit.com/r/<subreddit>/about.json`. If the request is successful and the SubredditType key isn't "private" and the response has Subscribers field, then the subreddit is valid.
 
 It then constructs a URL to fetch the posts from, based on the input subreddit, maximum amount of posts (specified in `limit` flag), and category ID. The URL is sent as a GET request to the Reddit API, and the response JSON data is parsed to extract the posts.
 
