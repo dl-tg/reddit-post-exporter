@@ -85,7 +85,6 @@ func subredditValid(subreddit string) bool {
 	// Parse the JSON response
 	var data struct {
 		Data struct {
-			PublicDescription string `json:"public_description"`
 			SubredditType     string `json:"subreddit_type"`
 			Subscribers       int    `json:"subscribers"`
 		} `json:"data"`
