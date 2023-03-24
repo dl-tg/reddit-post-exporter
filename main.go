@@ -158,7 +158,7 @@ func exportPosts(posts []map[string]interface{}, subreddit string, id int, isExp
 
 		var dateNow string = now.Format("01-Jan-2006")
 		var timeNow string = now.Format("15-04-05")
-		var filename string = fmt.Sprintf("post-%d.json", i)
+		var filename string = fmt.Sprintf("post-%d.json", i+1)
 
 		var path string = filepath.Join(".", subreddit, dateNow, timeNow, categoryID[id], fmt.Sprintf("post-%s", post["id"].(string)))
 
@@ -169,7 +169,7 @@ func exportPosts(posts []map[string]interface{}, subreddit string, id int, isExp
 		n, err := io.WriteString(file, string(jsonData))
 		checkError(err)
 
-		fmt.Printf("Saved post %d to path %s\nBytes: %d\n", i, path, n)
+		fmt.Printf("Saved post %d to path %s\nBytes: %d\n", i+1, path, n)
 
 		if isExportComments {
 			fetchComments(post, path, i)
@@ -215,7 +215,7 @@ func exportComments(commentsData []interface{}, path string, postIndex int) {
 					commentJSONData, err := json.MarshalIndent(comment, "", "  ")
 					checkError(err)
 
-					commentFilename := fmt.Sprintf("comment-%d.json", j)
+					commentFilename := fmt.Sprintf("comment-%d.json", j+1)
 					commentFile := saveToDir(commentPath, commentFilename, 0700)
 
 					defer commentFile.Close()
@@ -223,7 +223,7 @@ func exportComments(commentsData []interface{}, path string, postIndex int) {
 					n, err := io.WriteString(commentFile, string(commentJSONData))
 					checkError(err)
 
-					fmt.Printf("Saved comment %d for post %d to path %s\nBytes: %d\n", j, postIndex, commentPath, n)
+					fmt.Printf("Saved comment %d for post %d to path %s\nBytes: %d\n", j+1, postIndex+1, commentPath, n)
 				}
 			}
 		}
