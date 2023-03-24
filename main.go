@@ -124,7 +124,6 @@ func fetchPosts(subreddit string, id, limit int, isExportComments bool) {
 	body, err := io.ReadAll(res.Body)
 	checkError(err)
 
-	// Data struct
 	var data struct {
 		Data struct {
 			Children []struct {
@@ -199,7 +198,7 @@ func fetchComments(post map[string]interface{}, path string, postIndex int) {
 		var commentsData []interface{}
 		checkError(json.Unmarshal(commentsBody, &commentsData))
 
-		exportComments(commentsData, path, postIndex)
+		exportComments(commentsData, path, postIndex+1)
 	}
 }
 func exportComments(commentsData []interface{}, path string, postIndex int) {
@@ -223,7 +222,7 @@ func exportComments(commentsData []interface{}, path string, postIndex int) {
 					n, err := io.WriteString(commentFile, string(commentJSONData))
 					checkError(err)
 
-					fmt.Printf("Saved comment %d for post %d to path %s\nBytes: %d\n", j+1, postIndex+1, commentPath, n)
+					fmt.Printf("Saved comment %d for post %d to path %s\nBytes: %d\n", j+1, postIndex, commentPath, n)
 				}
 			}
 		}
