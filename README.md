@@ -40,7 +40,7 @@ git clone https://github.com/sncelta/reddit-post-exporter.git
 ```
 ...or download the source from GitHub.
 
-2. Navigate to `src` folder and run `go build` in terminal. You may skip building the program if you have Go installed and want to run it from source.
+2. Navigate to `rpe` folder and run `go build` in terminal. You may skip building the program if you have Go installed and want to run it from source.
 
 That will create an executable called `reddit-post-exporter`
 
