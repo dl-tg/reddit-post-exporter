@@ -85,8 +85,8 @@ func subredditValid(subreddit string) bool {
 	// Parse the JSON response
 	var data struct {
 		Data struct {
-			SubredditType     string `json:"subreddit_type"`
-			Subscribers       int    `json:"subscribers"`
+			SubredditType string `json:"subreddit_type"`
+			Subscribers   int    `json:"subscribers"`
 		} `json:"data"`
 	}
 	err = json.NewDecoder(resp.Body).Decode(&data)
@@ -101,7 +101,7 @@ func subredditValid(subreddit string) bool {
 
 }
 
-func fetchPosts(subreddit string, id, limit int, export_comments bool) {
+func fetchPosts(subreddit string, id, limit int, isExportComments bool) {
 	// Construct the URL to get posts from, based on input subreddit, maximum amount of posts and category id
 	var url string = fmt.Sprintf("https://www.reddit.com/r/%s/%s.json?limit=%d", subreddit, categoryID[id], limit)
 
@@ -145,10 +145,10 @@ func fetchPosts(subreddit string, id, limit int, export_comments bool) {
 		posts[i] = data.Data.Children[i].Data
 	}
 
-	exportPosts(posts, subreddit, id, export_comments)
+	exportPosts(posts, subreddit, id, isExportComments)
 }
 
-func exportPosts(posts []map[string]interface{}, subreddit string, id int, export_comments bool) {
+func exportPosts(posts []map[string]interface{}, subreddit string, id int, isExportComments bool) {
 	now := time.Now()
 
 	for i, post := range posts {
@@ -171,7 +171,7 @@ func exportPosts(posts []map[string]interface{}, subreddit string, id int, expor
 
 		fmt.Printf("Saved post %d to path %s\nBytes: %d\n", i, path, n)
 
-		if export_comments {
+		if isExportComments {
 			fetchComments(post, path, i)
 		}
 	}
@@ -234,12 +234,12 @@ func main() {
 	// Define flags
 	var subreddit string
 	var limit, id int
-	var export_comments bool
+	var isExportComments bool
 
 	flag.StringVar(&subreddit, "subreddit", "programming", "Subreddit to fetch posts from")
 	flag.IntVar(&limit, "limit", 5, "Amount of posts to fetch")
 	flag.IntVar(&id, "categoryID", 0, "Category of posts to fetch\n0 - new\n1 - top\n2 - controversial\n3 - hot\nr4 - rising")
-	flag.BoolVar(&export_comments, "exportComments", true, "Toggle comment exporting")
+	flag.BoolVar(&isExportComments, "exportComments", true, "Toggle comment exporting")
 
 	flag.Parse()
 
@@ -249,5 +249,5 @@ func main() {
 
 	id = int(math.Min(float64(id), 3))
 
-	fetchPosts(subreddit, id, limit, export_comments)
+	fetchPosts(subreddit, id, limit, isExportComments)
 }
