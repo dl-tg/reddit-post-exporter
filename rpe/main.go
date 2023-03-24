@@ -112,16 +112,16 @@ func fetchPosts(subreddit string, id, limit int, isExportComments bool) {
 	/* Sends an HTTP request and returns an HTTP response, following policy
 	   (such as redirects, cookies, auth) as configured on the client. */
 
-	res, err := client.Do(req)
+	resp, err := client.Do(req)
 	checkError(err)
 
-	defer res.Body.Close()
+	defer resp.Body.Close()
 
-	if res.StatusCode != http.StatusOK {
-		log.Fatalf("HTTP request failed with status code %d", res.StatusCode)
+	if resp.StatusCode != http.StatusOK {
+		log.Fatalf("HTTP request failed with status code %d", resp.StatusCode)
 	}
 
-	body, err := io.ReadAll(res.Body)
+	body, err := io.ReadAll(resp.Body)
 	checkError(err)
 
 	var data struct {
@@ -187,12 +187,12 @@ func fetchComments(post map[string]interface{}, path string, postIndex int) {
 		checkError(err)
 
 		cfClient := &http.Client{}
-		commentsRes, err := cfClient.Do(commentsReq)
+		commentsResp, err := cfClient.Do(commentsReq)
 		checkError(err)
 
-		defer commentsRes.Body.Close()
+		defer commentsResp.Body.Close()
 
-		commentsBody, err := io.ReadAll(commentsRes.Body)
+		commentsBody, err := io.ReadAll(commentsResp.Body)
 		checkError(err)
 
 		var commentsData []interface{}
