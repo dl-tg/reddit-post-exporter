@@ -19,7 +19,7 @@ var categoryID = [5]string{"new", "top", "controversial", "hot", "rising"}
 // I don't want to set f*ckton of headers for every request...
 // http.NewRequest wrapper with additional headers
 
-func rpe_request(method, path string, body io.Reader) (*http.Request, error) {
+func rpeRequest(method, path string, body io.Reader) (*http.Request, error) {
 	req, err := http.NewRequest(method, path, body)
 
 	if err != nil {
@@ -69,7 +69,7 @@ func subredditValid(subreddit string) bool {
 
 	client := &http.Client{}
 
-	req, err := rpe_request("GET", url, nil)
+	req, err := rpeRequest("GET", url, nil)
 	if err != nil {
 		log.Fatal(err)
 		return false
@@ -107,7 +107,7 @@ func fetchPosts(subreddit string, id, limit int, export_comments bool) {
 	var url string = fmt.Sprintf("https://www.reddit.com/r/%s/%s.json?limit=%d", subreddit, categoryID[id], limit)
 
 	client := &http.Client{}
-	req, err := rpe_request("GET", url, nil)
+	req, err := rpeRequest("GET", url, nil)
 	checkError(err)
 
 	/* Sends an HTTP request and returns an HTTP response, following policy
@@ -185,7 +185,7 @@ func fetchComments(post map[string]interface{}, path string, postIndex int) {
 
 		// Construct the URL for the post's comments using post's permalink key
 		commentsURL := fmt.Sprintf("https://www.reddit.com%s", permalink)
-		commentsReq, err := rpe_request("GET", commentsURL, nil)
+		commentsReq, err := rpeRequest("GET", commentsURL, nil)
 		checkError(err)
 
 		cfClient := &http.Client{}
