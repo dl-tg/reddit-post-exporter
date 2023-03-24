@@ -13,7 +13,7 @@ Check [example](https://github.com/sncelta/reddit-post-exporter/tree/example) br
 ### Notes
 If you want to know what each key in comment/post JSON means, read [here](https://www.reddit.com/dev/api/)
 
-### Benchmarks
+### Speed
 I tried exporting AskReddit again and it took me 1:01 minutes to export 100 posts and ~4126 comments with them.
 
 ```
