@@ -1,6 +1,9 @@
+![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+![Reddit](https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white)
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct-single.svg)](https://stand-with-ukraine.pp.ua)
 
 # Reddit Post Exporter
+
 ![Preview](https://s10.gifyu.com/images/Desktop-3-21-2023-11-33-59-PM.gif)
 
 ### Unfortunately, 100 posts is the maximum because of how Reddit works. https://www.reddit.com/dev/api#GET_top see limit property
