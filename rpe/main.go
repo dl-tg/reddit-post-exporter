@@ -245,6 +245,10 @@ func main() {
 	if !subredditValid(subreddit) {
 		log.Fatal("Specified subreddit is invalid. Are you sure it exists or isn't banned/private?")
 	}
+	if limit > 100 {
+		limit = 100
+		fmt.Printf("Warning: Limit cannot be greater than 100, as Reddit endpoints don't provide more than 100 posts. Only 100 posts will be exported.")
+	}
 
 	id = int(math.Min(float64(id), 3))
 
