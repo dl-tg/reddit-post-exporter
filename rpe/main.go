@@ -243,14 +243,19 @@ func main() {
 	flag.Parse()
 
 	if !subredditValid(subreddit) {
-		log.Fatal("Specified subreddit is invalid. Are you sure it exists or isn't banned/private?")
+		log.Fatal("Error: Specified subreddit is invalid. Are you sure it exists or isn't banned/private?")
 	}
 	if limit > 100 {
 		limit = 100
 		fmt.Printf("Warning: Limit cannot be greater than 100, as Reddit endpoints don't provide more than 100 posts. Only 100 posts will be exported.")
-	}
-
-	id = int(math.Min(float64(id), 3))
+}
+	if id < 0 || id > 4 {
+		fmt.Printf("Error: Input category ID (%d) is out of range (0 - 4). List of available categories:\n", id)
+	        for index, category := range categoryID {
+                           fmt.Printf("%d - %s\n", index, category)
+			}
+		os.Exit(1)
+    }
 
 	fetchPosts(subreddit, id, limit, isExportComments)
 }
